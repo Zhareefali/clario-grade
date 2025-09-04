@@ -5,6 +5,7 @@ import { WhyClario } from "@/components/ui/why-clario";
 import { ComparisonChart } from "@/components/ui/comparison-chart";
 import { CTAFooter } from "@/components/ui/cta-footer";
 import { useEffect } from "react";
+import { OurStory } from "@/components/ui/our-story";
 
 const Index = () => {
   useEffect(() => {
@@ -33,6 +34,7 @@ const Index = () => {
       <HowItWorks />
       <WhyClario />
       <ComparisonChart />
+      <OurStory />
       <CTAFooter />
     </main>
   );
