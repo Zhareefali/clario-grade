@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, Twitter, Linkedin } from "lucide-react";
+import { LegalModal } from "@/components/ui/LegalModal";
 
 export const CTAFooter = () => {
   return (
@@ -16,7 +17,7 @@ export const CTAFooter = () => {
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 leading-relaxed">
               Transform your grading process today. Grade with Clario and see the difference AI-powered grading can make.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
               <Button 
                 size="lg" 
@@ -27,14 +28,12 @@ export const CTAFooter = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               
-          <Button 
-            size="lg" 
-            className="text-lg px-8 py-6 h-auto bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all"
-          >
-            Schedule Demo
-          </Button>
-
-
+              <Button 
+                size="lg" 
+                className="text-lg px-8 py-6 h-auto bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all"
+              >
+                Schedule Demo
+              </Button>
             </div>
 
             {/* Trust indicators */}
@@ -86,8 +85,6 @@ export const CTAFooter = () => {
               <ul className="space-y-2 text-background/70">
                 <li><a href="#" className="hover:text-background transition-colors">Features</a></li>
                 <li><a href="#" className="hover:text-background transition-colors">Pricing</a></li>
-                <li><a href="#" className="hover:text-background transition-colors">API</a></li>
-                <li><a href="#" className="hover:text-background transition-colors">Integrations</a></li>
               </ul>
             </div>
 
@@ -95,10 +92,7 @@ export const CTAFooter = () => {
             <div>
               <h4 className="font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-background/70">
-                <li><a href="#" className="hover:text-background transition-colors">Documentation</a></li>
-                <li><a href="#" className="hover:text-background transition-colors">Help Center</a></li>
                 <li><a href="#" className="hover:text-background transition-colors">Contact Us</a></li>
-                <li><a href="#" className="hover:text-background transition-colors">Status</a></li>
               </ul>
             </div>
           </div>
@@ -109,9 +103,73 @@ export const CTAFooter = () => {
               © 2025 Clario. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm text-background/70 mt-4 md:mt-0">
-              <a href="#" className="hover:text-background transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-background transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-background transition-colors">Cookie Policy</a>
+              <LegalModal
+  title="Privacy Policy"
+  triggerLabel="Privacy Policy"
+  content={
+    <>
+      <p>
+        At Clario, your privacy is important to us. We are committed to protecting your personal
+        information and ensuring transparency about how we use it.
+      </p>
+      <p>
+        We collect only the information necessary to provide our services, such as your name, email
+        address, and usage activity. This data helps us improve Clario and offer a better user
+        experience.
+      </p>
+      <p>
+        Your information is never sold or shared with third parties without your consent, except as
+        required by law. You can request access to or deletion of your data at any time by
+        contacting our support team.
+      </p>
+    </>
+  }
+/>
+
+              <LegalModal
+  title="Terms of Service"
+  triggerLabel="Terms of Service"
+  content={
+    <>
+      <p>
+        By using Clario, you agree to abide by our terms and conditions. These terms govern your use
+        of our website and services.
+      </p>
+      <p>
+        You may not misuse Clario’s tools to engage in illegal, harmful, or disruptive behavior.
+        We reserve the right to suspend accounts that violate our policies or compromise the
+        platform’s integrity.
+      </p>
+      <p>
+        All intellectual property related to Clario, including logos, designs, and source code,
+        remains the property of the Clario team. We may update these terms at any time — continued
+        use implies acceptance of any changes.
+      </p>
+    </>
+  }
+/>
+
+              <LegalModal
+  title="Cookie Policy"
+  triggerLabel="Cookie Policy"
+  content={
+    <>
+      <p>
+        Clario uses cookies to enhance your browsing experience, analyze site traffic, and provide
+        tailored content.
+      </p>
+      <p>
+        Cookies are small text files stored on your device. They help us understand how users
+        interact with our platform so we can improve performance and usability.
+      </p>
+      <p>
+        By continuing to use Clario, you consent to our use of cookies. You can disable cookies in
+        your browser settings, but doing so may limit some features of our platform.
+      </p>
+    </>
+  }
+/>
+
             </div>
           </div>
         </div>

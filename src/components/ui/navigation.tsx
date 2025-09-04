@@ -31,9 +31,7 @@ export const Navigation = () => {
           >
             Why Clario
           </button>
-          <Button variant="outline" size="sm" className="btn-outline">
-            Sign In
-          </Button>
+
           <Button className="btn-primary" size="sm">
             Try Clario
           </Button>
